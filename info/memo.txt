@@ -1,0 +1,8 @@
+・コンパイルで「go tool: no such tool "compile"」
+　GOROOTで指定されていたパスがインストール場所と異なっていた為？
+　witch go でインスールされた本体ファイルから本体のパスを調べ、（binの上）
+　GOROOTに設定して、GOPATHはソースのあるsrcの上を指定することでコンパイルOK
+
+・commitを取り消したい場合、git reset --hard HEAD^やHEAD~3などで前に戻す。
+　--softだとローカルファイルは変らない。HARDの方がどこまで戻ったかは分かりやすい。
+　戻した後に、git pull origin URL でローカルに反映（マージ）すれば良い
